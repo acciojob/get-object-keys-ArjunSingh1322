@@ -9,15 +9,28 @@
 <body>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
-
-		const student = {
-        name: "John",
+// 1️⃣ Student Object बनाना
+const student = {
+  name: "John",
 };
 
-		function getkeys(student){
-		   return student.key(student)
-		}
-		console.log(getkeys())
+// 2️⃣ Function जो object की सभी keys return करेगा
+function getKeys(obj) {
+  return Object.keys(obj);
+}
+
+// 3️⃣ Testing the function
+console.log(getKeys(student)); // Output: ["name"]
+
+// Example with multiple properties
+const student2 = {
+  name: "Alice",
+  age: 21,
+  city: "New York"
+};
+
+console.log(getKeys(student2)); // Output: ["name", "age", "city"]
+
 		
 </script>
 
